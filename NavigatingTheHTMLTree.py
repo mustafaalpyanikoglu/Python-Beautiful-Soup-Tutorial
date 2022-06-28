@@ -13,14 +13,12 @@ trs = tbody.contents
 # print("\n--------------------------------------\n")
 # print(trs[0].next_sibling)  # sonraki content'i verir
 
-
 prices = {}
+
 
 for tr in trs[:10]:
     name, price = tr.contents[2:4]
     fixedName = name.p.string
     fixedPrice = price.a.string
-
     prices[fixedName] = fixedPrice
-
 print(prices)
